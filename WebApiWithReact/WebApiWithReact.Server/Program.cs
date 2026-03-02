@@ -30,7 +30,7 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.UseSpa(spa =>
+/*app.UseSpa(spa =>
 {
     spa.Options.SourcePath = "webapiwithreact.client";
 
@@ -38,6 +38,6 @@ app.UseSpa(spa =>
     {
         spa.UseProxyToSpaDevelopmentServer("http://localhost:3000");
     }
-});
+});*/
 
 app.Run();

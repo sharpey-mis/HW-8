@@ -1,0 +1,16 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: WebApiWithoutReact/Dockerfile
+    ports:
+      - "5138:8080"
+
+  web:
+    build:
+      context: .
+      dockerfile: weather-client/Dockerfile
+    ports:
+      - "3000:80"
+    depends_on:
+      - api

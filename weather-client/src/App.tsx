@@ -11,7 +11,7 @@ function App() {
   const [weather, setWeather] = useState<WeatherForecast[]>([]);
 
   useEffect(() => {
-    fetch("http://localhost:5138/weatherforecast")
+    fetch("/weatherforecast")
       .then((response) => {
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
